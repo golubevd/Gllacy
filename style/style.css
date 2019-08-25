@@ -3,9 +3,9 @@
 }
 
 body{
+    font-family: "Roboto", "Arial", sans-serif;
     font-size: 18px;
-    line-height: 1.2;
-     font-family: "Roboto", "Arial", sans-serif;
+    line-height: 1.2;    
      background-color: #849d8f;
 }
 
@@ -547,7 +547,6 @@ text-decoration: underline;
     box-shadow: 0 2px 2px 0 rgba(85,8,0,.46);    
 }
 
-
 .slider-controls{
     position: absolute;
     bottom: 25px;
@@ -596,12 +595,11 @@ text-decoration: underline;
   background-color: #ffffff;
 }
 
-.full-cart__btn{
-    width: 171px;
-   padding: 10px;
+.full-cart__btn{ 
+    align-self: flex-end;
+   padding: 10px 17px;
     font-size: 18px;
-    line-height: 24px;
-    margin: 0 0 0 auto;
+    line-height: 24px;    
 }
 
 
@@ -664,10 +662,12 @@ text-decoration: underline;
 
 .promotions-item--berry{
     background: url("../img/berry.jpg") no-repeat center;
+    background-size: cover;
 }
 
 .promotions-item--chocolate{
-  background: url("../img/chocolate.jpg") no-repeat center;  
+  background: url("../img/chocolate.jpg") no-repeat center;
+  background-size: cover;
 }
 
 .promotions-item__title{
@@ -689,16 +689,21 @@ text-decoration: underline;
 .promotions-item__btn{   
     font-size: 18px;
     line-height: 24px;
-    padding: 10px 15px;
-    margin:24px 0 5px auto;    
+    padding: 10px 15px;      
 }
 
 .promotions-item--berry .promotions-item__btn{
-     min-width: 165px;
+    align-self: flex-end;   
+    margin-top: 24px;
+    margin-bottom: 5px;
+    padding: 10px 23px;
 }
 
 .promotions-item--chocolate .promotions-item__btn{
-    min-width: 189px;
+    align-self: flex-end;  
+    margin-top: 24px;
+     margin-bottom: 5px;
+    padding: 10px 23px;
 }
 
 
