@@ -596,22 +596,6 @@ text-decoration: underline;
   background-color: #ffffff;
 }
 
-.visual-hidden:not(:focus):not(:active),
-input[type="checkbox"].visual-hidden,
-input[type="radio"].visual-hidden {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-    padding: 0;
-    white-space: nowrap;
-    -webkit-clip-path: inset(100%);
-    clip-path: inset(100%);
-    clip: rect(0 0 0 0);
-    overflow: hidden;
-}
-
-
 .full-cart__btn{
     width: 171px;
    padding: 10px;
@@ -717,3 +701,21 @@ input[type="radio"].visual-hidden {
     min-width: 189px;
 }
 
+
+
+/*Скрываем не активные элементы разметки*/
+.visual-hidden:not(:focus):not(:active),
+input[type="checkbox"].visual-hidden,
+input[type="radio"].visual-hidden,
+.visual-hidden{
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    white-space: nowrap;
+    -webkit-clip-path: inset(100%);
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
