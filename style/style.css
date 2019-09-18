@@ -1480,65 +1480,150 @@ footer {
 .pagination-arrow {
     position: relative;
     width: 26px;
-    height: 26px;
-    padding: 8px 2px;
+    height: 26px;   
     font-size: 0;
+    background: url("../img/pagination-arrow.png") no-repeat  center;
 }
 
-.pagination-arrow::before {
-    position: absolute;
-    content: "";
-    width: 3px;
-    height: 10px;
-    background: rgba(255, 255, 255, 1);
-    transform: rotate(45deg);
+.pagination-arrow__back{
+    transform: rotate(180deg);
 }
 
-.pagination-arrow::after {
-    position: absolute;
-    content: "";
-    width: 3px;
-    height: 10px;
-    background: rgba(255, 255, 255, 1);
-    transform: rotate(-45deg);
+.pagination-arrow:hover{
+  background:rgba(255, 255, 255, .2) url("../img/pagination-arrow.png") no-repeat  center;  
 }
 
-
-.pagination-arrow__back::after {
-    transform-origin: right bottom;
-}
-
-.pagination-arrow__back::before {
-    transform-origin: right top;
-}
-
-
-.pagination-arrow__forward::before {
-    margin: 0 -4px;
-    transform-origin: left bottom;
-}
-
-.pagination-arrow__forward::after {
-    margin: 0 -4px;
-    transform-origin: left top;
-}
-
-.pagination-arrow__back:active::before,
-.pagination-arrow__back:active::after,
-.pagination-arrow__forward:active::before,
-.pagination-arrow__forward:active::after {
-    background: rgba(0, 0, 0, 1);
-}
-
-
-.disabled::before,
-.disabled::after {
-    background: rgba(255, 255, 255, .2);
+.disabled{
+    opacity: .5;
 }
 
 .pages footer {
     padding: 20px 0 30px;
     border-top: 1px solid rgba(255, 255, 255, .5);
+}
+
+/*Модальное окно*/
+
+.modal{    
+    position: fixed;
+    display: none;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 0;
+    margin: 0;
+    background: rgba(0,0,0,.3);
+    z-index: 300;
+}
+
+.modal-wrapper{
+    position: relative;
+    margin: 334px auto; 
+    animation: bounce .6s;
+}
+
+.modal-writeus{    
+    width: 475px;
+    height: 443px;    
+    padding: 23px;   
+    background: #f8f7f4;
+    border-radius: 10px;   
+} 
+
+.modal-title{
+    margin: 0;
+    font-family: "Roboto Medium", "Arial",sans-serif;
+    font-size: 24px;
+    line-height: 28px;
+    color: #323232;
+}
+
+.close-modal{
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    opacity: .5;
+}
+
+.close-modal:hover{
+    opacity: 1;
+}
+
+.writeus-form{
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-input{
+    width: 267px;
+    height: 44px;
+    margin-bottom: 15px;
+    padding: 15px;
+    font-size: 16px;
+    line-height: 24px;
+    border: 1px solid #d3d3d2;
+    border-radius: 5px;
+}
+
+.modal-input__name{
+    margin-top: 25px;
+}
+
+.modal-input__textarea{
+    width: 427px;
+    height: 155px;
+}
+
+.modal-input:hover{
+    padding: 14px;
+    border: 2px solid #c7c6c5;
+}
+
+.modal-input:focus{
+    padding: 14px;
+    border: 2px solid #8fbdec;
+}
+
+.modal-btn{
+    align-self: flex-end;
+    margin-top: 5px;
+    padding: 12px 24px;
+    font-size: 18px;
+    line-height: 24px;
+    border: none;
+}
+
+
+@-webkit-keyframes bounce {
+    0% {
+        -webkit-transform: scale(0);
+        transform: scale(0);
+    }
+   
+    100% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+}
+}
+
+
+@keyframes bounce {
+    0% {
+        -webkit-transform: scale(0);
+        transform: scale(0);
+    }
+
+   
+    100% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+}
+
+.modal-show{
+    display: block;    
 }
 
 
